@@ -1,0 +1,23 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "01 一、HTML 模板\r 02 二、ReactDOM.render()\r 03 三、JSX 语法 \r 04 四、组件",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-plugin-react": "^6.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ataotao/React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ataotao/React/issues"
+  },
+  "homepage": "https://github.com/ataotao/React#readme"
+}
