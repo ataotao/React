@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../src/react/dist/react.js"></script>
+    <script src="../src/react-dom/dist/react-dom.js"></script>
+    <script src="../src/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      const obj = {
+        name: 'Atao',
+        age: 38,
+        gender:'男'
+      }
+      var HelloMessage = React.createClass({
+        render: function() {
+          let obj = this.props.obj;
+          return <ul>
+            <h1>Hello {obj.name} </h1>
+            <h2>age {obj.age}</h2>
+            <h3>gender {obj.gender}</h3>
+          </ul>;
+        }
+      });
+
+      ReactDOM.render(
+        <HelloMessage obj={obj} />,
+        document.getElementById('example')
+      );
+    </script>
+
+    <script type="text/babel">
+      console.log('添加组件属性，有一个地方需要注意，就是 class 属性需要写成 className ，for 属性需要写成 htmlFor ，这是因为 class 和 for 是 JavaScript 的保留字。');
+    </script>
+
+  </body>
+</html>
