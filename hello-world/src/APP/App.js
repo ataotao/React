@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-
 class App extends Component {
   render() {
     return (
@@ -15,23 +14,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
-
-
     );
   }
 }
 
-class Clock extends Component {
-  render() {
-    return (
-    <div>
-      <h1>Hello, world!</h1>
-      <h2>It is {this.props.date.toLocaleTimeString()}.</h2>
-    </div>
-    );
-  }
-}
-
-
-export {Clock, App};
-
+export default App;
