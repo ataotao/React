@@ -1,0 +1,15 @@
+{
+  "plugins": ["transform-react-jsx"],
+  "ignore": ["node_modules/*", "bar/**/*.js"],
+
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "safari >= 7"]
+        }
+      }
+    ]
+  ]
+}
