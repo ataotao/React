@@ -1,0 +1,12 @@
+@import url("//at.alicdn.com/t/font_241505_t6sp9r0eolgnwmi.css");
+body, html {
+    height: 100%;
+}
+
+body {
+    max-width: 720px;
+    margin: 0 auto!important;
+    background-color: #F1F1F1 !important;
+}
+
+.ell{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}

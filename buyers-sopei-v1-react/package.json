@@ -1,0 +1,38 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd-mobile": "^2.1.8",
+    "axios": "^0.18.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject",
+    "start-def": "node scripts/start.js",
+    "build-def": "node scripts/build.js",
+    "test-def": "node scripts/test.js --env=jsdom"
+  },
+  "proxy": "https://dev.q.sopei.cn",
+  "devDependencies": {
+    "babel-plugin-import": "^1.6.7",
+    "css-loader": "^0.28.11",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "react-app-rewire-less": "^2.1.1",
+    "react-app-rewired": "^1.5.0",
+    "redux-devtools-extension": "^2.13.2",
+    "style-loader": "^0.20.3"
+  }
+}
