@@ -44,7 +44,7 @@ module.exports = function override(config, env) {
           options: {
             // theme vars, also can use theme.js instead of this.
             // 全部变量地址 https://github.com/ant-design/ant-design-mobile/blob/master/components/style/themes/default.less
-            modifyVars: { "@brand-primary": "#1DA57A" },
+            modifyVars: { "@brand-primary": "#1a82d2" }
           },
         },
       ]
