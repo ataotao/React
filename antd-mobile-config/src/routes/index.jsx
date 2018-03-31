@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-do
 import NotFound from '../components/NotFound';
 import Loading from '../components/Loading';
 
-import App from '../App';
+import Main from '../components/main/Index';
 
 // import Member from '../components/member/Index';
 
@@ -18,9 +18,9 @@ export default () => (
   <Router>
     <Switch>
       <Route exact path="/" render={() => <Redirect push to="/loading" />} /> 
-      <Route exact path="/loading" component={Loading}/>
-      <Route path="/app" component={App}/>
-      <Route exact path="/404" component={NotFound} />
+      <Route path="/loading" component={Loading}/>
+      <Route path="/:tenant_id/:brand_id/main" component={Main}/>
+      <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   </Router>

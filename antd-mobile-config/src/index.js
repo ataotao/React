@@ -9,7 +9,7 @@ import { createLogger } from 'redux-logger'
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import reducer from './reducer';
-import Routes from './routes';
+import App from './App';
 import ENV from './assets/js/env';
 
 
@@ -25,10 +25,10 @@ const store = createStore(reducer,
 const render = Component => { 
     ReactDOM.render(
         <Provider store={store}>
-            <Component store={store} />
+            <Component />
         </Provider>,
         document.getElementById('root')
     );
 };
 
-render(Routes);
+render(App);

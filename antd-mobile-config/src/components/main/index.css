@@ -1,0 +1,40 @@
+.icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    padding: 8px;
+    display: inline-block;
+    font-size: 20px;
+}
+.dot{
+    right: 10px;
+    top: 10px;
+}
+
+.header{
+    height: 150px;
+    background-color: #FFF;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo{
+    height: 150px;
+    max-width: 100%;
+}
+
+.TabButton {
+    font-size: 14px;
+    margin-right: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    line-height: 33px;
+    height: 33px;
+}
+.TabButton_box{
+    height: 33px;
+    line-height: 33px;
+}

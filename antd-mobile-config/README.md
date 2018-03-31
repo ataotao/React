@@ -39,5 +39,17 @@ fetch('/api/user/v1.0/info/mine?tenant_id=370763113544693760&brand_id=3707631141
 - react-router-dom  会多出<Link> <BrowserRouter> 这样的 DOM 类组件。所以用 react-router-dom 吧，如果你会用到 DOM 绑定的话。
 - antd-mobile
 
+## 路由跳转
+```
+this.props.history.push('searchModel');
+```
+
+## 处理less
+查看文件config-overrides.js，增加选项javascriptEnabled处理less版本编译问题
+```
+options: {
+  javascriptEnabled: true,
+},
+```
 **************************************************************************************************************************************************
 

@@ -5,11 +5,12 @@ const fileLoaderMatcher = function (rule) {
 }
 
 module.exports = function override(config, env) {
+ 
   // babel-plugin-import
   config = injectBabelPlugin(['import', {
     libraryName: 'antd-mobile',
-    //style: 'css',
-    style: true, // use less for customized theme
+    style: 'css',
+    // style: true, // use less for customized theme
   }], config);
 
   // customize theme
@@ -42,9 +43,13 @@ module.exports = function override(config, env) {
         {
           loader: require.resolve('less-loader'),
           options: {
+            // 处理less版本编译问题
+            javascriptEnabled: true,
             // theme vars, also can use theme.js instead of this.
             // 全部变量地址 https://github.com/ant-design/ant-design-mobile/blob/master/components/style/themes/default.less
-            modifyVars: { "@brand-primary": "#1a82d2" }
+            modifyVars: { 
+              "@brand-primary": "#1a82d2"
+             }
           },
         },
       ]
