@@ -24,8 +24,7 @@
     "eject": "react-scripts eject",
     "start-rs": "react-scripts start",
     "build-rs": "react-scripts build",
-    "test-rs": "react-scripts test --env=jsdom",
-    "eject-rs": "react-scripts eject"
+    "test-rs": "react-scripts test --env=jsdom"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.6.7",
