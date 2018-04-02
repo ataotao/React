@@ -15,7 +15,7 @@ const isObjectValueEqual = (a, b) => {
         }
     }
     return true;
-}
+};
 
 // 数据请求动作
 const requestData = (category, params) => ({
@@ -31,7 +31,7 @@ export const receiveData = (res, category, params) => {
         res,
         category,
         params: params
-    }
+    };
 };
 
 /**

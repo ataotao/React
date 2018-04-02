@@ -1,39 +1,46 @@
 import React, { Component } from 'react';
 import { InputItem, Button, Flex, WhiteSpace, WingBlank, List } from 'antd-mobile';
-import { createForm } from 'rc-form';
 import style from './SearchInputBar.css';
 
 class SearchInputBar extends Component {
-    
+    state = {
+        value: this.props.config.value
+    }
+    componentDidMount() {
+        
+    }
+
+    handleChange = value => {
+        this.setState({value});
+        this.props.onChange(value);
+    }
+
     render() {
-        console.log(this.props.form);
-        const { getFieldProps } = this.props.form;
+        let { config } = this.props;
+        let { maxLength, placeholder, hasError } = config;
         return (
-        <div>
-            <WingBlank>
+            <div>
+                <WingBlank>
                     <List>
                         <Flex>
                             <div className={style.item_box_input}>
-                                <InputItem 
-                                {...getFieldProps('autofocus')} 
-                                clear 
-                                placeholder="输入车型查询配件，如CRV、杰德" 
-                                maxLength="20"  
-                                ref={el => (this.autoFocusInst = el)} 
-                                className={style.item_input}
+                                <InputItem clear maxLength={maxLength} 
+                                    placeholder={placeholder}                                    
+                                    className={style.item_input}
+                                    onChange={this.handleChange} 
+                                    value={this.state.value} 
                                 />
                             </div>
                             <div className={style.item_box_btn}>
-                                <Button type="primary" size="large" inline className={style.item_btn}>查询</Button>
+                                <Button type="primary" size="large" inline className={style.item_btn} disabled={hasError}>查询</Button>
                             </div>
                         </Flex>
                     </List>
-                    <WhiteSpace size="lg" />
-                    
-                    
+                    <WhiteSpace />
                 </WingBlank>
-            </div>);
+            </div>
+        );
     }
 }
 
-export default createForm()(SearchInputBar);
+export default SearchInputBar;

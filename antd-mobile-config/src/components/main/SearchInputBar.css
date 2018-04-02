@@ -1,5 +1,5 @@
 .item_box_btn{
-    flex: 0 1 72px;
+    flex: 0 1 62px;
     height: 44px;
     line-height: 44px;
 }
@@ -8,6 +8,7 @@
     border-bottom-left-radius: 0; 
     height: 44px;
     line-height: 44px;
+    font-size: 14px;
 }
 .item_box_input{
     flex: 1 1 auto;

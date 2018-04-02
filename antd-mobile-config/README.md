@@ -38,6 +38,9 @@ fetch('/api/user/v1.0/info/mine?tenant_id=370763113544693760&brand_id=3707631141
 - axios ajax请求
 - react-router-dom  会多出<Link> <BrowserRouter> 这样的 DOM 类组件。所以用 react-router-dom 吧，如果你会用到 DOM 绑定的话。
 - antd-mobile
+- react-loadable 异步加载（也可以预加载）组件
+- eslint-plugin-react
+- eslint
 
 ## 路由跳转
 ```
@@ -46,10 +49,38 @@ this.props.history.push('searchModel');
 
 ## 处理less
 查看文件config-overrides.js，增加选项javascriptEnabled处理less版本编译问题
+
 ```
 options: {
   javascriptEnabled: true,
 },
 ```
+## eslint验证(没有加入build时的验证，只是编写代码时验证)
+```
+cnpm install eslint-plugin-react eslint-plugin-import eslint --save-dev
+
+
+
+找到.eslintrc.js文件的extends.
+将
+"extends": "eslint:recommended",
+替换成
+"extends": ["eslint:recommended", "plugin:react/recommended"],
+
+设置
+plugins: ['react', 'import'],
+
+// 某些文件关闭eslint检查
+/*eslint-disable*/
+function test() {
+   return true
+ }
+// 给某一行js代码关闭eslint检查
+// eslint-disable-next-line
+alert('foo')
+
+```
+
+
 **************************************************************************************************************************************************
 

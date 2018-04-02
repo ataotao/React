@@ -6,13 +6,24 @@ import React from 'react';
 // import { Router, Route, Redirect, Switch } from 'react-router-dom';
 // import { HashRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import Loadable from 'react-loadable';
+import PageLoading from '../components/PageLoading';
 
-import NotFound from '../components/NotFound';
-import Loading from '../components/Loading';
+const NotFound = Loadable({
+  loader: () => import('../components/NotFound'),
+  loading: PageLoading
+});
 
-import Main from '../components/main/Index';
+const Loading = Loadable({
+  loader: () => import('../components/Loading'),
+  loading: PageLoading
+});
 
-// import Member from '../components/member/Index';
+const Main = Loadable({
+  loader: () => import('../components/main/Index'),
+  loading: PageLoading
+});
+
 
 export default () => (
   <Router>

@@ -34,6 +34,10 @@
     line-height: 33px;
     height: 33px;
 }
+.TabButton::before{
+    border-bottom-right-radius: 0  !important;
+    border-bottom-left-radius: 0 !important;
+}
 .TabButton_box{
     height: 33px;
     line-height: 33px;
