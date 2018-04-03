@@ -22,10 +22,10 @@ class SearchModel extends Component {
      * 根据关键词搜索车型
      */
     getSearchCarmodelsFn = keywords => {
-        if (keywords !== '') {
-            // 延迟输入查询，减少不必要的请求
-            clearTimeout(timer);
-            timer = setTimeout(() => {
+        // 延迟输入查询，减少不必要的请求
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            if (keywords !== '') {
                 const { tenant_id, brand_id } = this.props.match.params;
                 getSearchCarmodels({ tenant_id, brand_id, keywords }).then(res => {
                     this.setState({
@@ -33,12 +33,12 @@ class SearchModel extends Component {
                     });
                     timer = null;
                 });
-            }, 300);
-        } else {
-            this.setState({
-                modelList: []
-            });
-        }
+            } else {
+                this.setState({
+                    modelList: []
+                });
+            }
+        }, 300);
     };
 
     /**
