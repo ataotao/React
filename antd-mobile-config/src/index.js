@@ -16,12 +16,14 @@ import ENV from './assets/js/env';
 
 // redux 注入操作
 const middleware = [thunk];
+let createMiddle;
 if (ENV.debug) {
     middleware.push(createLogger());
+    createMiddle = composeWithDevTools(applyMiddleware(...middleware));
+}else{
+    createMiddle = applyMiddleware(...middleware);
 }
-const store = createStore(reducer, 
-    composeWithDevTools(applyMiddleware(...middleware))
-);
+const store = createStore(reducer, createMiddle);
 
 const render = Component => { 
     ReactDOM.render(
