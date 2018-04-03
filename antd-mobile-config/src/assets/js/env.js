@@ -3,7 +3,7 @@ let obj = {
     carBrandLogoUrl: window.location.protocol + '//carbrandlogo-1251517753.file.myqcloud.com/',
     imgUrl: window.location.protocol + '//sopei001-1251517753.file.myqcloud.com/',
     sopeibrandlogo: window.location.protocol + '//sopeibrandlogo-1251517753.file.myqcloud.com/',
-    apiUrl:window.location.origin + '/api/'
+    apiUrl: window.location.origin + '/api/'
 };
 switch (window.location.hostname) {
     case '192.168.1.250':

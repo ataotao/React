@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, WingBlank } from 'antd-mobile';
+import { List } from 'antd-mobile';
 // import { Link } from 'react-router-dom';
 import style from './SearchList.css';
 const Item = List.Item;
@@ -38,14 +38,12 @@ class SearchList extends Component {
         });
         return (
             <div className="list_box">
-                <WingBlank>
-                    <List
-                        className={style.list_box}
-                        style={{ height: listBoxHeight }}
-                    >
-                        {listItems}
-                    </List>
-                </WingBlank>
+                <List
+                    className={style.list_box}
+                    style={{ height: listBoxHeight }}
+                >
+                    {listItems}
+                </List>
             </div>
         );
     }

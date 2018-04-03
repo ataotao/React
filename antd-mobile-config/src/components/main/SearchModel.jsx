@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import SearchInputBar from './SearchInputBar';
 import SearchList from './SearchList';
 import { getSearchCarmodels } from '../../http';
+import { WingBlank, WhiteSpace } from 'antd-mobile';
+let timer;
 
 class SearchModel extends Component {
     state = {
@@ -13,18 +15,25 @@ class SearchModel extends Component {
         modelList: []
     };
 
-    componentDidMount() {}
+    componentDidMount() {
+
+    }
     /**
      * 根据关键词搜索车型
      */
     getSearchCarmodelsFn = keywords => {
         if (keywords !== '') {
-            const { tenant_id, brand_id } = this.props.match.params;
-            getSearchCarmodels({ tenant_id, brand_id, keywords }).then(res => {
-                this.setState({
-                    modelList: res.data
+            // 延迟输入查询，减少不必要的请求
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                const { tenant_id, brand_id } = this.props.match.params;
+                getSearchCarmodels({ tenant_id, brand_id, keywords }).then(res => {
+                    this.setState({
+                        modelList: res.data
+                    });
+                    timer = null;
                 });
-            });
+            }, 300);
         } else {
             this.setState({
                 modelList: []
@@ -54,12 +63,15 @@ class SearchModel extends Component {
     render() {
         let { modelList } = this.state;
         return (
-            <div>
+            <WingBlank>
                 {/* 搜索框 */}
                 <SearchInputBar config={this.state} onChange={this.onChange} />
                 {/* 搜索结果列表 */}
                 {modelList.length > 0 && <SearchList list={modelList} />}
-            </div>
+                {/* 查询记录 */}
+                <WhiteSpace size="lg" />
+                <div>经常查询的品牌</div>
+            </WingBlank>
         );
     }
 }
