@@ -31,6 +31,24 @@ mobile[https://mobile.ant.design/index-cn]
     }
 ```
 
+### 配置antd主题 theme
+- .webpackrc（JSON 格式）或 .webpackrc.js（ES 6 语法）中配置
+```
+"theme": {
+  "@primary-color": "#1DA57A"
+}
+// 或者，
+"theme": "./theme-config.js"
+```
+### 环境变量
+- .webpackrc（JSON 格式）或 .webpackrc.js（ES 6 语法）中配置
+```
+"define": {
+  "process.env.TEST": 1,
+  "USE_COMMA": 2,
+}
+```
+
 ## 使用说明
 
 ### 路由
@@ -97,4 +115,10 @@ mobile[https://mobile.ant.design/index-cn]
     export default {
     exportStatic: {},
     }
+```
+
+## 环境变量设置
+- package.json
+```
+set PORT=3000&&umi dev
 ```
