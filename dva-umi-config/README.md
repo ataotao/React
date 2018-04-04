@@ -1,10 +1,11 @@
 ## 框架组成
-- umi[工具 + 路由]
-- dva[数据 + 状态管理redux]
-- antd(或mobile)[UI视图]
+- `umi` [工具 + 路由]
+- `dva` [数据 + 状态管理redux] (dva底层引入了redux-sagas做异步流程控制)
+- `antd` (或mobile)[UI视图]
 - UI文档
-pc[https://ant.design/index-cn]
-mobile[https://mobile.ant.design/index-cn]
+    - pc[https://ant.design/index-cn]
+    - mobile[https://mobile.ant.design/index-cn]
+    - UI风格可参考 antd pro [https://preview.pro.ant.design](没有采用此框架，使用umi更灵活)
 
 
 ## 文件说明
